@@ -7,7 +7,7 @@ export const fetchUser = async (userId) => {
     const userData = await response.json()
     return userData
   } catch (err) {
-    alert(err)
+    console.error(err)
   }
 }
 /*fetchUser('google')
