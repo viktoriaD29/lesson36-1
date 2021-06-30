@@ -10,6 +10,6 @@ export const fetchUser = async (userId) => {
     return Promise.reject();
   }
 }
-fetchUser('google')
-  .then(userData => console.log(userData))
-  .catch(err => Promise.reject())
+//fetchUser('google')
+//  .then(userData => console.log(userData))
+  
