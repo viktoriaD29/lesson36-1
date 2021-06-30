@@ -5,11 +5,11 @@ export const fetchUser = async (userId) => {
       return null
     }
     const userData = await response.json()
-    return userData
+    return Promise.resolve(userData)
   } catch {
-    return Promise.reject()
+    return Promise.reject();
   }
 }
-/*fetchUser('google')
+fetchUser('google')
   .then(userData => console.log(userData))
-  .catch(err => Promise.reject(err))*/
+  .catch(err => Promise.reject())
