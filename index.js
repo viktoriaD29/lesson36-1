@@ -1,4 +1,4 @@
-export const fetchUser = async (userId) => {
+const fetchUser = async (userId) => {
   try {
     const response = await fetch(`https://api.github.com/users/${userId}`);
     if (!response.ok) {
@@ -7,8 +7,8 @@ export const fetchUser = async (userId) => {
     const userData = await response.json();
     return Promise.resolve(userData);
   } catch (err) {
-    throw new Error(err.message)
+    throw new Error()
   }
 };
-//fetchUser('google')
-  //.then(userData => console.log(userData))
+fetchUser('google')
+  .then(userData => console.log(userData))
