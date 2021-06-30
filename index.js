@@ -6,10 +6,10 @@ export const fetchUser = async (userId) => {
     }
     const userData = await response.json()
     return userData
-  } catch (err) {
-    return Promise.reject(new Error (err.message))
+  } catch {
+    return Promise.reject()
   }
 }
 /*fetchUser('google')
   .then(userData => console.log(userData))
-  .catch(err => Promise.reject())*/
+  .catch(err => Promise.reject(err))*/
