@@ -7,7 +7,7 @@ export const fetchUser = async (userId) => {
     const userData = await response.json();
     return Promise.resolve(userData);
   } catch (err) {
-    throw err
+    throw new Error(err.message)
   }
 };
 //fetchUser('google')
