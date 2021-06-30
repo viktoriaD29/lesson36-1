@@ -1,15 +1,14 @@
 export const fetchUser = async (userId) => {
-  try{
-    const response = await fetch(`https://api.github.com/users/${userId}`)
-    if(!response.ok) {
-      return null
+  try {
+    const response = await fetch(`https://api.github.com/users/${userId}`);
+    if (!response.ok) {
+      return null;
     }
-    const userData = await response.json()
-    return Promise.resolve(userData)
+    const userData = await response.json();
+    return Promise.resolve(userData);
   } catch {
-    return Promise.reject();
+    throw new Error();
   }
-}
+};
 //fetchUser('google')
 //  .then(userData => console.log(userData))
-  
