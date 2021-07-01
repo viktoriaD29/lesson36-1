@@ -7,7 +7,7 @@ export const fetchUser = async (userId) => {
     const userData = await response.json();
     return Promise.resolve(userData);
   } catch (err) {
-    throw new Error('Error');
+    throw new Error('Failed to fetch user');
   }
 };
 fetchUser('google').then((userData) => console.log(userData));
